@@ -1,0 +1,818 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\wwwroot\\css\\volunteer-dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\wwwroot\\css\\volunteer-dashboard.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\wwwroot\\css\\profile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\wwwroot\\css\\profile.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\wwwroot\\css\\login.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\wwwroot\\css\\home.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\wwwroot\\css\\header.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\wwwroot\\css\\header.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\views\\shared\\_eventcardspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\views\\shared\\_eventcardspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\views\\user\\profile.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\areas\\identity\\data\\vololinkuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\areas\\identity\\data\\vololinkuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\wwwroot\\css\\profile.css||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\wwwroot\\css\\profile.css||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\wwwroot\\css\\volunteer-dashboard.css||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\wwwroot\\css\\volunteer-dashboard.css||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\areas\\identity\\pages\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\areas\\identity\\pages\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\hp\\source\\repos\\VoloLinkApp\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\areas\\identity\\pages\\account\\login.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\migrations\\20250307204316_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\migrations\\20250307204316_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\areas\\identity\\data\\vololinkdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\areas\\identity\\data\\vololinkdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\migrations\\20250309223800_rolesadded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\migrations\\20250309223800_rolesadded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\wwwroot\\css\\login.css||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\wwwroot\\css\\login.css||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\views\\shared\\_layout.cshtml.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\wwwroot\\css\\home.css||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\wwwroot\\css\\home.css||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\views\\shared\\_layout.cshtml.css||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\views\\shared\\_layout.cshtml.css||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\areas\\identity\\pages\\account\\manage\\_managenav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\areas\\identity\\pages\\account\\manage\\_managenav.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\areas\\identity\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\areas\\identity\\pages\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\areas\\identity\\pages\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\areas\\identity\\pages\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\areas\\identity\\pages\\account\\register.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\areas\\identity\\pages\\account\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\areas\\identity\\pages\\account\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\scaffoldingreadme.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\areas\\identity\\pages\\account\\logout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\vololinkapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\vololinkapp.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|c:\\users\\hp\\source\\repos\\vololinkapp\\vololinkapp\\migrations\\20250307210832_userchanged.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E723285E-466D-4BBA-8B65-9249EDB8E796}|VoloLinkApp\\VoloLinkApp.csproj|solutionrelative:vololinkapp\\migrations\\20250307210832_userchanged.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 339,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Program.cs",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Program.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Program.cs",
+              "RelativeToolTip": "VoloLinkApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T00:22:15.255Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-08T15:38:06.392Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "VoloLinkApp\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAAAJgAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-12T00:12:49.807Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-08T15:38:03.26Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-08T21:06:42.427Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "home.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\home.css",
+              "RelativeDocumentMoniker": "VoloLinkApp\\wwwroot\\css\\home.css",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\home.css",
+              "RelativeToolTip": "VoloLinkApp\\wwwroot\\css\\home.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-18T12:43:35.976Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "login.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\login.css",
+              "RelativeDocumentMoniker": "VoloLinkApp\\wwwroot\\css\\login.css",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\login.css",
+              "RelativeToolTip": "VoloLinkApp\\wwwroot\\css\\login.css",
+              "ViewState": "AgIAALoAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-15T10:05:29.416Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-16T16:28:06.341Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "volunteer-dashboard.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\volunteer-dashboard.css",
+              "RelativeDocumentMoniker": "VoloLinkApp\\wwwroot\\css\\volunteer-dashboard.css",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\volunteer-dashboard.css",
+              "RelativeToolTip": "VoloLinkApp\\wwwroot\\css\\volunteer-dashboard.css",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAAAK8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-16T16:27:52.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-25T00:41:10.242Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Controllers\\UserController.cs",
+              "RelativeToolTip": "VoloLinkApp\\Controllers\\UserController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T09:07:48.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_EventCardsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Shared\\_EventCardsPartial.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Views\\Shared\\_EventCardsPartial.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Shared\\_EventCardsPartial.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Views\\Shared\\_EventCardsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-15T10:41:44.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "VoloLinkApp\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwBMAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-08T21:15:00.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "header.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\header.css",
+              "RelativeDocumentMoniker": "VoloLinkApp\\wwwroot\\css\\header.css",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\header.css",
+              "RelativeToolTip": "VoloLinkApp\\wwwroot\\css\\header.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHsAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-12T00:11:42.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "profile.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\profile.css",
+              "RelativeDocumentMoniker": "VoloLinkApp\\wwwroot\\css\\profile.css",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\profile.css",
+              "RelativeToolTip": "VoloLinkApp\\wwwroot\\css\\profile.css",
+              "ViewState": "AgIAAAwBAAAAAAAAAAAAAA0AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-15T17:26:25.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "VoloLinkApp\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "VoloLinkApp\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-03-11T16:20:37.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-09T22:26:31.709Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "VoloLinkApp\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T22:23:36.758Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Services\\EmailSender.cs",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Services\\EmailSender.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Services\\EmailSender.cs",
+              "RelativeToolTip": "VoloLinkApp\\Services\\EmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T09:54:54.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "VoloLinkUser.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Data\\VoloLinkUser.cs",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Areas\\Identity\\Data\\VoloLinkUser.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Data\\VoloLinkUser.cs",
+              "RelativeToolTip": "VoloLinkApp\\Areas\\Identity\\Data\\VoloLinkUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T01:24:02.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Profile.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\User\\Profile.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Views\\User\\Profile.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\User\\Profile.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Views\\User\\Profile.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAKQAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-15T09:07:56.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "profile.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\profile.css",
+              "RelativeDocumentMoniker": "VoloLinkApp\\wwwroot\\css\\profile.css",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\profile.css",
+              "RelativeToolTip": "VoloLinkApp\\wwwroot\\css\\profile.css",
+              "ViewState": "AgIAAEIBAAAAAAAAAAAAAEsBAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-15T09:08:01.412Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "volunteer-dashboard.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\volunteer-dashboard.css",
+              "RelativeDocumentMoniker": "VoloLinkApp\\wwwroot\\css\\volunteer-dashboard.css",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\volunteer-dashboard.css",
+              "RelativeToolTip": "VoloLinkApp\\wwwroot\\css\\volunteer-dashboard.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAK8AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-15T10:40:40.042Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-15T09:52:48.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-02T07:49:30.557Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAHkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-02T07:49:49.764Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Login.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "RelativeToolTip": "VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Login.cshtml.cs",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAwwHUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:40:04.541Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "20250307204316_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Migrations\\20250307204316_InitialMigration.cs",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Migrations\\20250307204316_InitialMigration.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Migrations\\20250307204316_InitialMigration.cs",
+              "RelativeToolTip": "VoloLinkApp\\Migrations\\20250307204316_InitialMigration.cs",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T20:43:16.507Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "VoloLinkDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Data\\VoloLinkDbContext.cs",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Areas\\Identity\\Data\\VoloLinkDbContext.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Data\\VoloLinkDbContext.cs",
+              "RelativeToolTip": "VoloLinkApp\\Areas\\Identity\\Data\\VoloLinkDbContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-02T07:48:10.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "20250309223800_RolesAdded.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Migrations\\20250309223800_RolesAdded.cs",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Migrations\\20250309223800_RolesAdded.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Migrations\\20250309223800_RolesAdded.cs",
+              "RelativeToolTip": "VoloLinkApp\\Migrations\\20250309223800_RolesAdded.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-09T22:38:01.112Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "login.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\login.css",
+              "RelativeDocumentMoniker": "VoloLinkApp\\wwwroot\\css\\login.css",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\login.css",
+              "RelativeToolTip": "VoloLinkApp\\wwwroot\\css\\login.css",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAAFkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-15T08:01:57.78Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "_Layout.cshtml.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Views\\Shared\\_Layout.cshtml.css",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Views\\Shared\\_Layout.cshtml.css",
+              "RelativeToolTip": "VoloLinkApp\\Views\\Shared\\_Layout.cshtml.css",
+              "ViewState": "AgIAAFMAAAAAAAAAAAApwKsAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-14T19:20:39.323Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "home.css",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\home.css",
+              "RelativeDocumentMoniker": "VoloLinkApp\\wwwroot\\css\\home.css",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\wwwroot\\css\\home.css",
+              "RelativeToolTip": "VoloLinkApp\\wwwroot\\css\\home.css",
+              "ViewState": "AgIAADcBAAAAAAAAAAAmwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-15T07:07:03.928Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "_ManageNav.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Manage\\_ManageNav.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T22:25:29.552Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Areas\\Identity\\Pages\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T16:01:08.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T16:01:04.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Areas\\Identity\\Pages\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-02T07:49:23.83Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "Register.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "RelativeToolTip": "VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Register.cshtml.cs",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAcwIMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:21:38.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "20250307210832_UserChanged.cs",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Migrations\\20250307210832_UserChanged.cs",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Migrations\\20250307210832_UserChanged.cs",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Migrations\\20250307210832_UserChanged.cs",
+              "RelativeToolTip": "VoloLinkApp\\Migrations\\20250307210832_UserChanged.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:08:32.794Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\appsettings.json",
+              "RelativeDocumentMoniker": "VoloLinkApp\\appsettings.json",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\appsettings.json",
+              "RelativeToolTip": "VoloLinkApp\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-02T07:50:33.185Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "ScaffoldingReadMe.txt",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\ScaffoldingReadMe.txt",
+              "RelativeDocumentMoniker": "VoloLinkApp\\ScaffoldingReadMe.txt",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\ScaffoldingReadMe.txt",
+              "RelativeToolTip": "VoloLinkApp\\ScaffoldingReadMe.txt",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-02-28T01:15:24.88Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Areas\\Identity\\Pages\\Account\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-06T18:09:27.645Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Logout.cshtml",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "RelativeToolTip": "VoloLinkApp\\Areas\\Identity\\Pages\\Account\\Logout.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-02T07:49:53.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "VoloLinkApp\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\Properties\\launchSettings.json",
+              "RelativeToolTip": "VoloLinkApp\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-02T07:49:13.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "VoloLinkApp.csproj",
+              "DocumentMoniker": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\VoloLinkApp.csproj",
+              "RelativeDocumentMoniker": "VoloLinkApp\\VoloLinkApp.csproj",
+              "ToolTip": "C:\\Users\\hp\\source\\repos\\VoloLinkApp\\VoloLinkApp\\VoloLinkApp.csproj",
+              "RelativeToolTip": "VoloLinkApp\\VoloLinkApp.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-02-28T01:10:52.43Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 294,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

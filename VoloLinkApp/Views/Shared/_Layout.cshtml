@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - VoloLinkApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/VoloLinkApp.styles.css" asp-append-version="true" > 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="~/css/profile.css" />
+    <style>
+        /* Override Bootstrap's default link color */
+        a { color: inherit; }
+        .header-container a { color: inherit !important; }
+    </style>
+   
+</head>
+<body>
+  
+    <header>
+        <nav class="header-container">
+            <div class="logo">
+                <img src="~/images/bwlogo.png" alt="VoloLink Logo">
+                @* <a asp-controller="Home" asp-area="" asp-action="Index" class="volo-link">VoloLink</a> *@
+                <a class="vololink" href="@Url.Action("Index", "Home")">VoloLink</a>
+                @* <a asp-controller="Home" asp-area="" asp-action="Index" class="vololink">VoloLink</a>  *@
+            </div>           
+           @*  <a class="vololink" href="@Url.Action("Index", "Home")">VoloLink</a> *@
+            @* @Html.ActionLink("VoloLink", "Index", "Home", null, new { @class = "vololink" }) *@
+
+            <div class="buttons">
+                <a class="btn-outline" href="@Url.Page("/Account/Register", new { area = "Identity" })" > Стати волонтером </a>
+
+                <img src="~/images/login0.png" alt="Login Icon">
+                <a class="loginlink btnlink" href="@Url.Page("/Account/Login", new { area = "Identity" })">
+                    Увійти
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    @* <div class="container">
+        <main role="main" class="pb-3">
+            
+        </main>
+    </div> *@
+
+    <main class="site-container">
+        @RenderBody()
+    </main>
+
+    
+
+    <footer class="footer">
+        <hr class="footer-divider" />
+        <div class="footer-content">
+            <span class="footer-text">All Rights Reserved</span>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-discord"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+    @RenderSection("Styles", required: false)
+</body>
+</html>

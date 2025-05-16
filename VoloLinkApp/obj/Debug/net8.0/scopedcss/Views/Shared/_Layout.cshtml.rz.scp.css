@@ -1,0 +1,258 @@
+/* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+/* Add this at the top of your file */
+a[b-snjmftw5nj] {
+    color: inherit;
+    text-decoration: none;
+}
+
+.header-container a[b-snjmftw5nj] {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/* Основні стилі хедера */
+header[b-snjmftw5nj] {
+    background: linear-gradient(90deg, #64C661 0%, #75F670 100%);
+    /*background-color: darkred;*/
+    padding: 10px 20px;
+}
+
+/* Контейнер хедера */
+.header-container[b-snjmftw5nj] {
+    display: flex;
+    justify-content: space-between; /* Space between logo and buttons */
+    align-items: center; /* Vertically center items */
+    max-width: 1200px;
+    margin: 0 auto; /* Center the header container */
+    height: 60px; /* Consistent height for the header */
+    padding: 0 20px; /* Add horizontal padding */
+}
+
+.vololink[b-snjmftw5nj] {
+    color: black !important;
+    text-decoration: none;
+    font-weight: 500 !important;
+    font-family: "Inter-Light", sans-serif !important;
+    font-size: 40px !important; /* Adjust font size */
+    line-height: 1.2; /* Adjust line height */
+}
+
+/* Логотип */
+.logo[b-snjmftw5nj] {
+    display: flex;
+    align-items: center; /* Vertically align the logo and text */
+    justify-content: space-between;
+}
+
+.logo img[b-snjmftw5nj] {
+    height: 40px; /* Set a consistent height for the logo */
+    /*margin-right: 10px;*/ /* Add spacing between the logo and text */
+}
+
+/* Кнопки */
+.buttons[b-snjmftw5nj] {
+    display: flex;
+    align-items: center; /* Vertically align buttons */
+    justify-content: space-between;
+    gap: 15px; /* Add spacing between buttons */
+}
+
+/* Кнопка "Стати волонтером" */
+.btn-outline[b-snjmftw5nj] {
+    border: 2px solid #44BA40;
+    border-radius: 5px;
+    padding: 8px 15px;
+    font-size: 16px; /* Adjust font size */
+    text-decoration: none;
+    color: darkgreen;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-outline:hover[b-snjmftw5nj] {
+    background: #44BA40;
+    color: white;
+}
+
+/* Кнопка "Увійти" */
+.btnlink[b-snjmftw5nj] {
+    display: flex;
+    align-items: center; /* Vertically align the login icon and text */
+    text-decoration: none;
+    font-size: 16px; /* Adjust font size */
+    color: black !important;
+   
+    font-weight: 400;
+   /* padding: 8px 15px;*/
+}
+
+.login-link img[b-snjmftw5nj] {
+    height: 20px; /* Set a consistent height for the login icon */
+    /*margin-right: 8px;*/ /* Add spacing between the icon and text */
+}
+
+
+
+.footer[b-snjmftw5nj] {
+    background-color: #f9f9f9;
+    /*padding: 20px 40px;*/
+    font-family: sans-serif;
+    padding: 10px 20px;
+
+ 
+}
+
+.footer-divider[b-snjmftw5nj] {
+    height: 4px;
+    background-color: #2ecc71;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.footer-content[b-snjmftw5nj] {
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 60px;
+    margin: 0 auto;
+    /*max-width: 1200px;*/
+    /*  padding: 0 20px;*/
+    /* flex-wrap: wrap;*/
+}
+
+.footer-text[b-snjmftw5nj] {
+    color: #333;
+    font-size: 18px;
+}
+
+.social-icons[b-snjmftw5nj] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons a[b-snjmftw5nj] {
+    color: #2ecc71;
+    font-size: 24px;
+    margin-left: 30px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+    .social-icons a:hover[b-snjmftw5nj] {
+        color: #27ae60;
+    }
+
+
+
+
+.site-container[b-snjmftw5nj] {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    max-width: 2200px;
+    margin: 0 auto;
+    /*padding: 0 20px;*/ /* універсальні відступи зліва/справа */
+    box-sizing: border-box;
+}
+
+
+
+/*.loginlink {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    color: black !important;
+    font-weight: 400;*/
+    /*border: 2px solid red;*/
+    /*padding: 9px 16px;*/
+    /*padding: 8px 15px;
+}*/
+
+/*header .header-container .buttons .loginlink,
+header .header-container .buttons a[href*="Account/Login"],
+header .header-container .buttons a[href*="Identity"] {
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+    font-size: 18px;
+    color: black !important;
+    font-weight: 400;
+    padding: 8px 15px;
+}
+*/
+/* Reset any Bootstrap link colors */
+/*.header-container a:not(.btn-outline):link,
+.header-container a:not(.btn-outline):visited,
+.header-container a:not(.btn-outline):hover,
+.header-container a:not(.btn-outline):active {
+    color: black;
+    text-decoration: none;
+}*/
+
+/*a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+a {
+  color: #0077cc;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}*/
+
+.footer[b-snjmftw5nj] {
+   
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+}
+
+@media (max-width: 768px) {
+    .header-container[b-snjmftw5nj] {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .buttons[b-snjmftw5nj] {
+        margin-top: 10px; /* Add spacing between logo and buttons */
+    }
+
+    .vololink[b-snjmftw5nj] {
+        font-size: 20px !important; /* Adjust font size for smaller screens */
+    }
+}

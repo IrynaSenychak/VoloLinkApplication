@@ -1,0 +1,436 @@
+﻿body {
+    background-color: rgba(39, 232, 65, 0.2); /* Light transparent green */
+    /* min-height: 100vh;*/
+}
+.site-container {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 !important;
+  /*  padding: 1rem 3rem 1rem 3rem;*/
+}
+
+
+
+.frame-5 {
+    padding-top: 100px; /* або скільки потрібно для відступу від хедера */
+    /*background: url('/images/bgvolo.png') center center;*/
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* центрірує .frame-img */
+}
+.rectangle-7 {
+    margin: 0 auto;
+    display: block;
+    border-radius: 0px;
+    flex-shrink: 0;
+    margin: 30px;
+    width: 1119px;
+    height: 496px;
+    position: relative;
+    overflow: visible;
+}
+
+.frame-img {
+    display: flex;
+    flex-direction: column;
+  /*  gap: 91px;*/
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    width: 948px;
+    /* position: absolute;*/
+    position: relative;
+   /* left: 274px;
+    top: 62px;*/
+    color: #ffffff;
+}
+
+/*.div {*/
+    /*color: #ffffff;*/
+    /*text-align: center;
+    font-family: "Inter-Black", sans-serif;
+    font-size: 60px;
+    font-weight: 900;
+    position: relative;
+    width: 917px;
+    height: 146px;
+}*/
+
+.text-block {
+    display: flex;
+    flex-direction: row;
+    gap: 204px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    align-self: stretch;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.text-volo {
+    color: #ffffff;
+    text-align: left;
+    font-family: "Inter-Black", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    position: relative;
+    width: 488px;
+    height: 193px;
+}
+
+.frame-1 {
+    background: #e6e9e7;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: #12b55b;
+    border-width: 4px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 256px;
+    height: 74px;
+    position: relative;
+}
+
+.div2 {
+    color: #124c25;
+    text-align: center;
+    font-family: "Inter-Black", sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    position: relative;
+}
+
+
+/* ---------- Головний контейнер ---------- */
+.landing-container {
+    text-align: center;
+    padding: 60px 20px;
+    background: #f8f9fa;
+}
+
+    /* ---------- Заголовок ---------- */
+    .landing-container h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 20px;
+    }
+
+    /* ---------- Опис під заголовком ---------- */
+    .landing-container p {
+        font-size: 1.2rem;
+        color: #666;
+        max-width: 800px;
+        margin: 0 auto 40px;
+    }
+
+/* ---------- Контейнер кнопок ---------- */
+.landing-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.landing-buttons a {
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        text-decoration: none;
+        border-radius: 6px;
+        transition: 0.3s;
+    }
+
+.btn-register {
+    background: #007bff;
+    color: white;
+    border: none;
+}
+
+    .btn-register:hover {
+        background: #0056b3;
+    }
+
+.btn-login {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+    .btn-login:hover {
+        background: #007bff;
+        color: white;
+    }
+
+/* ---------- Сітка подій ---------- */
+.events-container {
+    padding: 50px 20px;
+    background: white;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.event-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+    .event-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .event-card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+    }
+
+    .event-card .event-info {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .event-card h3 {
+        font-size: 1.4rem;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .event-card p {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+.btn-details {
+    display: inline-block;
+    padding: 10px 16px;
+    font-size: 1rem;
+    color: white;
+    background: #28a745;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+    .btn-details:hover {
+        background: #218838;
+    }
+
+/* ---------- Hero Section ---------- */
+.main-content {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 1rem 0rem;
+}
+
+
+.hero-section {
+    background: url('/images/bgvolo.png') center/cover no-repeat;
+    padding: 1rem 1rem;
+   /* width: 95%;*/
+     width: 85vw;   
+    margin: 0 auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: center;
+    /*left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;*/
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero-content {
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 4rem;
+    border-radius: 8px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.hero-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #34495e;
+    margin-bottom: 2rem;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #27ae60;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #219a52;
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        width: 95%;
+        padding: 2rem 1rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+}
+
+.events-section {
+    /*background-color: rgba(39, 232, 65, 0.1);*/
+    padding: 50px 20px;
+   /* background: #f8f9fa;*/
+}
+
+.events-section .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.section-subtitle {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.event-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-image {
+    position: relative;
+}
+
+.event-image img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.event-category {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.event-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.event-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.event-description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.event-meta {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.event-meta span {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.btn-detail {
+    display: inline-block;
+    background-color: #27ae60;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: background-color 0.3s ease;
+
+    padding: 10px 16px;
+    font-size: 1rem;
+   
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+    .btn-detail:hover {
+        background-color: #219a52;
+        color: white;
+        text-decoration: none;
+       
+    }
