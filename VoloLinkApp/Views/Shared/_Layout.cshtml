@@ -30,12 +30,29 @@
             @* @Html.ActionLink("VoloLink", "Index", "Home", null, new { @class = "vololink" }) *@
 
             <div class="buttons">
-                <a class="btn-outline" href="@Url.Page("/Account/Register", new { area = "Identity" })" > Стати волонтером </a>
-
-                <img src="~/images/login0.png" alt="Login Icon">
-                <a class="loginlink btnlink" href="@Url.Page("/Account/Login", new { area = "Identity" })">
-                    Увійти
-                </a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="btn-outline" href="@Url.Action("Profile", "User")">
+                        <i class="fas fa-user"></i> Профіль
+                    </a>
+                    <form method="post" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" style="display: inline;">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="loginlink btnlink" style="background: none; border: none;">
+                            <i class="fas fa-sign-out-alt"></i> Вийти
+                        </button>
+                    </form>
+                }
+                else
+                {
+                    <a class="btn-outline" href="@Url.Page("/Account/Register", new { area = "Identity" })">
+                        Стати волонтером
+                    </a>
+                    <img src="~/images/login0.png" alt="Login Icon">
+                    <a class="loginlink btnlink" href="@Url.Page("/Account/Login", new { area = "Identity" })">
+                        Увійти
+                    </a>
+                }
+                
             </div>
         </nav>
     </header>

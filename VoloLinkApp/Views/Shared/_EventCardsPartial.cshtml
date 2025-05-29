@@ -1,17 +1,36 @@
+@model VoloLinkApp.Models.Event
+
 <div class="event-card">
     <div class="event-image">
-        <img src="/images/event1.jpg" alt="Прибирання парку">
-        <div class="event-category">Екологія</div>
+        <img src="/images/event1.jpg" alt="@Model.Title">
+        @if (Model.RequiresVerifiedVolunteer)
+        {
+            <div class="event-category">Верифіковані волонтери</div>
+        }
+        else
+        {
+            <div class="event-category">Всі волонтери</div>
+        }
     </div>
     <div class="event-info">
-        <h3 class="event-title">Прибирання парку</h3>
-        <p class="event-description">Допоможемо прибрати територію парку та зробити наше місто чистішим.</p>
+        <h3 class="event-title">@Model.Title</h3>
+        <p class="event-description">@Model.Description</p>
         <div class="event-meta">
-            <span class="event-date"><i class="fas fa-calendar"></i> 15 березня</span>
-            <span class="event-location"><i class="fas fa-map-marker-alt"></i> Центральний парк</span>
+            <span class="event-date">
+                <i class="fas fa-calendar"></i>
+                @Model.Date.ToString("dd MMMM")
+            </span>
+            <span class="event-location">
+                <i class="fas fa-map-marker-alt"></i>
+                @Model.Location
+            </span>
         </div>
-        <a class="btn btn-detail" href="#">Детальніше <i class="fas fa-arrow-right"></i></a>
+        <div class="event-creator">
+            <small>Організатор: @Model.Creator.FirstName @Model.Creator.LastName</small>
+        </div>
+        <a class="btn btn-detail"
+           href="@Url.Action("Details", "Event", new { id = Model.Id })">
+            Детальніше <i class="fas fa-arrow-right"></i>
+        </a>
     </div>
 </div>
-
-<!-- Add more event cards as needed -->

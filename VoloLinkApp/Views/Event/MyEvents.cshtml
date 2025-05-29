@@ -1,0 +1,116 @@
+@model VoloLinkApp.Models.MyEventsViewModel
+@{
+    ViewData["Title"] = "Мої події";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/events.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+}
+<div class="profile-container">
+    <div class="profile-layout">
+        @await Html.PartialAsync("_SideMenuPartial", (object)ViewBag.SideMenuData)
+        
+        <div class="events-container">
+            @if (ViewBag.IsVerifiedVolunteer || ViewBag.IsAdministrator)
+            {
+               @*  <div class="events-header">
+                    <h1>Мої події</h1>
+                    <a href="@Url.Action("Create", "Event")" class="btn btn-primary">
+                        <i class="fas fa-plus-circle"></i> Створити нову подію
+                    </a>
+                </div>
+ *@
+                <div class="events-section">
+                    <h2>Створені події</h2>
+                    @if (!((List<Event>)ViewBag.CreatedEvents).Any())
+                    {
+                        <div class="no-events">
+                            <i class="fas fa-calendar-times fa-3x"></i>
+                            <p>У вас поки немає створених подій</p>
+                            <a href="@Url.Action("Create", "Event")" class="btn btn-primary">
+                                Створити першу подію
+                            </a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="events-grid">
+                            @foreach (var item in (List<Event>)ViewBag.CreatedEvents)
+                            {
+                                <div class="event-card">
+                                    <div class="event-header">
+                                        <h3>@item.Title</h3>
+                                        @if (item.RequiresVerifiedVolunteer)
+                                        {
+                                            <span class="badge verified-badge">
+                                                <i class="fas fa-shield-alt"></i> Верифіковані волонтери
+                                            </span>
+                                        }
+                                    </div>
+                                    <div class="event-info">
+                                        <p><i class="fas fa-clock"></i> @item.Date.ToString("dd.MM.yyyy HH:mm")</p>
+                                        <p><i class="fas fa-map-marker-alt"></i> @item.Location</p>
+                                        <p><i class="fas fa-users"></i> Учасників: @item.Participants.Count</p>
+                                    </div>
+                                    <div class="event-actions">
+                                        <a href="@Url.Action("Edit", "Event", new { id = item.Id })" class="btn btn-outline">
+                                            <i class="fas fa-edit"></i> Редагувати
+                                        </a>
+                                        <a href="@Url.Action("Details", "Event", new { id = item.Id })" class="btn btn-primary">
+                                            <i class="fas fa-info-circle"></i> Деталі
+                                        </a>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    }
+                </div>
+            }
+
+            <div class="events-section">
+                <h2>Події, в яких я беру участь</h2>
+                @if (!((List<Event>)ViewBag.ParticipatingEvents).Any())
+                {
+                    <div class="no-events">
+                        <i class="fas fa-calendar-times fa-3x"></i>
+                        <p>Ви ще не берете участі в жодній події</p>
+                        <a href="@Url.Action("FindEvents", "User")" class="btn btn-primary">
+                            Знайти події
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <div class="events-grid">
+                        @foreach (var item in (List<Event>)ViewBag.ParticipatingEvents)
+                        {
+                            <div class="event-card participating">
+                                <div class="event-header">
+                                    <h3>@item.Title</h3>
+                                    @if (item.RequiresVerifiedVolunteer)
+                                    {
+                                        <span class="badge verified-badge">
+                                            <i class="fas fa-shield-alt"></i> Верифіковані волонтери
+                                        </span>
+                                    }
+                                </div>
+                                <div class="event-info">
+                                    <p><i class="fas fa-clock"></i> @item.Date.ToString("dd.MM.yyyy HH:mm")</p>
+                                    <p><i class="fas fa-map-marker-alt"></i> @item.Location</p>
+                                    <p><i class="fas fa-user"></i> Організатор: @item.Creator.UserName</p>
+                                    <p><i class="fas fa-users"></i> Учасників: @item.Participants.Count</p>
+                                </div>
+                                <div class="event-actions">
+                                    <a href="@Url.Action("Details", "Event", new { id = item.Id })" class="btn btn-primary">
+                                        <i class="fas fa-info-circle"></i> Деталі
+                                    </a>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>

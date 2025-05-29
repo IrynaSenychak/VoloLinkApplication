@@ -1,0 +1,100 @@
+@model VoloLinkApp.Models.Event
+@{
+    ViewData["Title"] = "Редагування події";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/events.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+}
+<div class="profile-container">
+    <div class="profile-layout">
+            @await Html.PartialAsync("_SideMenuPartial", (object)ViewBag.SideMenuData)
+
+<div class="event-form-container">
+    <h1>Редагування події</h1>
+
+    <form asp-action="Edit" method="post">
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="CreatorId" />
+
+        <div class="form-group">
+            <label asp-for="Title">Назва події</label>
+            <input asp-for="Title" class="form-control" required />
+            <span asp-validation-for="Title" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Description">Опис</label>
+            <textarea asp-for="Description" class="form-control" rows="5" required></textarea>
+            <span asp-validation-for="Description" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Date">Дата та час</label>
+            <input asp-for="Date" class="form-control" type="datetime-local" required />
+            <span asp-validation-for="Date" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Location">Місце проведення</label>
+            <input asp-for="Location" class="form-control" required />
+            <span asp-validation-for="Location" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label>
+                <input asp-for="RequiresVerifiedVolunteer" type="checkbox" />
+                Потрібна верифікація волонтера
+            </label>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
+                <i class="fas fa-save"></i> Зберегти зміни
+            </button>
+            <a href="@Url.Action("MyEvents")" class="btn btn-outline">
+                <i class="fas fa-times"></i> Скасувати
+            </a>
+            <button type="button" class="btn btn-danger" onclick="showDeleteConfirmation()">
+                <i class="fas fa-trash"></i> Видалити
+            </button>
+
+        </div>
+    </form>
+
+
+    <div class="modal fade" id="deleteConfirmationModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Підтвердження видалення</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Ви впевнені, що хочете видалити цю подію? Цю дію неможливо скасувати.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Скасувати</button>
+                    <form asp-action="Delete" asp-route-id="@Model.Id" method="post" style="display: inline;">
+                        @Html.AntiForgeryToken()
+                        <button type="submit" class="btn btn-danger">Видалити</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        function showDeleteConfirmation() {
+            $('#deleteConfirmationModal').modal('show');
+        }
+    </script>
+}

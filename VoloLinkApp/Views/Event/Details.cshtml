@@ -1,0 +1,101 @@
+@model VoloLinkApp.Models.Event
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/events.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+}
+
+
+<div class="profile-container">
+    <div class="profile-layout">
+@await Html.PartialAsync("_SideMenuPartial", (object)ViewBag.SideMenuData)
+
+<div class="event-details-container">
+    <div class="event-header">
+        <h1>@Model.Title</h1>
+        <div class="event-meta">
+            <span class="event-date">
+                <i class="fas fa-calendar"></i>
+                @Model.Date.ToString("dd MMMM yyyy, HH:mm")
+            </span>
+            <span class="event-location">
+                <i class="fas fa-map-marker-alt"></i>
+                @Model.Location
+            </span>
+        </div>
+    </div>
+
+    <div class="event-content">
+        <div class="event-description">
+            <h2>Опис події</h2>
+            <p>@Model.Description</p>
+        </div>
+
+        <div class="event-organizer">
+            <h2>Організатор</h2>
+            <div class="organizer-info">
+                <i class="fas fa-user-circle fa-2x"></i>
+                <span>@Model.Creator.UserName</span>
+            </div>
+        </div>
+
+        <div class="event-requirements">
+            @if (Model.RequiresVerifiedVolunteer)
+            {
+                <div class="requirement-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    Потрібна верифікація волонтера
+                </div>
+            }
+        </div>
+
+        <div class="event-participants">
+            <h2>Учасники (@Model.Participants.Count)</h2>
+            <div class="participants-list">
+                @foreach (var participant in Model.Participants)
+                {
+                    <div class="participant">
+                        <i class="fas fa-user-circle"></i>
+                        <span>@participant.UserName</span>
+                    </div>
+                }
+            </div>
+        </div>
+
+        @if (!ViewBag.IsCreator)
+        {
+            <div class="event-actions">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    @if (!ViewBag.IsParticipating)
+                    {
+                        <form asp-action="JoinEvent" asp-route-id="@Model.Id" method="post">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-plus-circle"></i> Долучитись до події
+                            </button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form asp-action="WithdrawFromEvent" asp-route-id="@Model.Id" method="post">
+                            <button type="submit" class="btn btn-danger">
+                                <i class="fas fa-times-circle"></i> Відмовитись від участі
+                            </button>
+                        </form>
+                    }
+                }
+                else
+                {
+                    <a href="@Url.Page("/Account/Login", new { area = "Identity" })" class="btn btn-primary">
+                        <i class="fas fa-sign-in-alt"></i> Увійдіть щоб долучитись
+                    </a>
+                }
+            </div>
+        }
+    </div>
+</div>
+    </div>
+</div>

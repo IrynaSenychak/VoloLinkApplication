@@ -1,0 +1,51 @@
+@model IEnumerable<VerificationRequest>
+@{
+    ViewData["Title"] = "Запити на верифікацію";
+}
+
+<div class="profile-container">
+    <div class="profile-layout">
+@await Html.PartialAsync("_SideMenuPartial", (object)ViewBag.SideMenuData)
+<div class="container mt-4">
+    <h2>Запити на верифікацію волонтерів</h2>
+
+    @if (!Model.Any())
+    {
+        <div class="alert alert-info">
+            Немає нових запитів на верифікацію
+        </div>
+    }
+    else
+    {
+        foreach (var request in Model)
+        {
+            <div class="card mb-3">
+                <div class="card-header">
+                    <h5>Запит від @request.User.UserName</h5>
+                    <small>Дата: @request.RequestDate.ToString("dd.MM.yyyy HH:mm")</small>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">@request.Message</p>
+                    
+                    <form asp-action="ProcessVerification" method="post">
+                        <input type="hidden" name="requestId" value="@request.Id" />
+                        <div class="form-group">
+                            <label>Відповідь адміністратора:</label>
+                            <textarea name="response" class="form-control" rows="2"></textarea>
+                        </div>
+                        <div class="btn-group mt-3">
+                            <button type="submit" name="approved" value="true" class="btn btn-success">
+                                <i class="fas fa-check"></i> Підтвердити
+                            </button>
+                            <button type="submit" name="approved" value="false" class="btn btn-danger">
+                                <i class="fas fa-times"></i> Відхилити
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        }
+    }
+</div>
+    </div>
+</div>

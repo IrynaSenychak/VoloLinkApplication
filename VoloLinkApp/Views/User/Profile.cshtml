@@ -33,81 +33,21 @@
 
         <div class="profile-layout">
             <!-- Left Side Menu -->
-            <div class="side-menu">
-                <div class="menu-header">
-                    <div class="user-avatar">
-                        <i class="fas fa-user-circle fa-3x"></i>
-                    </div>
-                    <div class="user-info">
-                        <h3>@Model.UserName</h3>
-                        <span class="role-label @(ViewBag.IsVerifiedVolunteer ? "verified" : "")">
-                            @(ViewBag.IsVerifiedVolunteer ? "Верифікований волонтер" : "Волонтер")
-                        </span>
-                    </div>
-                 </div>
-                
-
-            <nav class="menu-items">
-                    <!-- Common menu items -->
-                    <a href="@Url.Action("Profile", "User")" class="menu-item active">
-                        <i class="fas fa-user"></i>
-                        <span>Мій профіль</span>
-                    </a>
-                    <a href="@Url.Action("Settings", "User")" class="menu-item">
-                        <i class="fas fa-cog"></i>
-                        <span>Налаштування профілю</span>
-                    </a>
-                    <a href="@Url.Action("MyEvents", "User")" class="menu-item">
-                        <i class="fas fa-calendar-check"></i>
-                        <span>Мої події</span>
-                    </a>
-                    <a href="@Url.Action("FindEvents", "User")" class="menu-item">
-                        <i class="fas fa-search"></i>
-                        <span>Знайти події</span>
-                    </a>
-
-                    @if (ViewBag.IsVerifiedVolunteer || User.IsInRole("Admin"))
-                    {
-                        <div class="menu-section">
-                            <h4>Керування подіями</h4>
-                            <a href="@Url.Action("Create", "Events")" class="menu-item">
-                                <i class="fas fa-plus-circle"></i>
-                                <span>Створити подію</span>
-                            </a>
-                        </div>
-                    }
-
-                    @if (User.IsInRole("Admin"))
-                    {
-                        <div class="menu-section">
-                            <h4>Адміністрування</h4>
-                            <a href="@Url.Action("VerifyUsers", "Admin")" class="menu-item">
-                                <i class="fas fa-user-check"></i>
-                                <span>Верифікація користувачів</span>
-                            </a>
-                            <a href="@Url.Action("ManageUsers", "Admin")" class="menu-item">
-                                <i class="fas fa-users-cog"></i>
-                                <span>Керування користувачами</span>
-                            </a>
-                        </div>
-                    }
-                </nav>
-                
-            </div>
-
-          
+            <div class="profile-container">
+                <div class="profile-layout">
+                    @await Html.PartialAsync("_SideMenuPartial", (object)ViewBag.SideMenuData)
 
 
-        <!-- Volunteer Profile View -->
+                    <!-- Volunteer Profile View -->
             <div class="main-content">
         <div class="profile-header">
             <div class="profile-avatar">
                 <i class="fas fa-user-circle fa-4x"></i>
             </div>
             <div class="profile-info">
-                <h1>@Model.UserName</h1>
+                <h1>@Model.FirstName</h1>
                 <span class="role-badge @(ViewBag.IsVerifiedVolunteer ? "verified" : "")">
-                    @(ViewBag.IsVerifiedVolunteer ? "Верифікований волонтер" : "Волонтер")
+                            @(ViewBag.IsAdministrator ? "Адміністратор" : (ViewBag.IsVerifiedVolunteer ? "Верифікований волонтер" : "Волонтер"))
                 </span>
             </div>
         </div>
@@ -166,6 +106,9 @@
             }
         </div>
             </div>
+        </div>
+    
+ </div>
         </div>
     }
  </div>

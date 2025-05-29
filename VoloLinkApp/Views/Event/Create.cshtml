@@ -1,0 +1,70 @@
+@model VoloLinkApp.Models.Event
+@{
+    ViewData["Title"] = "Створення події";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/events.css" />
+}
+
+<div class="profile-container">
+    <div class="profile-layout">
+        @await Html.PartialAsync("_SideMenuPartial", (object)ViewBag.SideMenuData)
+
+        <div class="event-form-container">
+            <h2>Створення нової події</h2>
+
+            <form asp-action="Create" method="post" class="event-form">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label asp-for="Title">Назва події</label>
+                    <input asp-for="Title" class="form-control" placeholder="Введіть назву події" />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Description">Опис події</label>
+                    <textarea asp-for="Description" class="form-control" rows="5" 
+                              placeholder="Детальний опис події, вимоги до волонтерів, що потрібно взяти з собою тощо"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Location">Місце проведення</label>
+                    <input asp-for="Location" class="form-control" placeholder="Введіть адресу або місце проведення" />
+                    <span asp-validation-for="Location" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Date">Дата та час проведення</label>
+                    <input asp-for="Date" class="form-control" type="datetime-local" value="@Model.Date.ToString("yyyy-MM-ddTHH:mm")" />
+                    <span asp-validation-for="Date" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="custom-control custom-checkbox">
+                        <input asp-for="RequiresVerifiedVolunteer" class="custom-control-input" type="checkbox" />
+                        <label class="custom-control-label" asp-for="RequiresVerifiedVolunteer">
+                            Потрібні тільки верифіковані волонтери
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-plus-circle"></i> Створити подію
+                    </button>
+                    <a asp-action="MyEvents" class="btn btn-secondary">
+                        <i class="fas fa-times"></i> Скасувати
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

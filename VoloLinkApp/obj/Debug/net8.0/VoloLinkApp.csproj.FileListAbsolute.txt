@@ -264,3 +264,4 @@ C:\Users\hp\source\repos\VoloLinkApp\VoloLinkApp\bin\Debug\net8.0\VoloLinkApp.st
 C:\Users\hp\source\repos\VoloLinkApp\VoloLinkApp\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\hp\source\repos\VoloLinkApp\VoloLinkApp\obj\Debug\net8.0\staticwebassets.build.endpoints.json
 C:\Users\hp\source\repos\VoloLinkApp\VoloLinkApp\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\hp\source\repos\VoloLinkApp\VoloLinkApp\obj\Debug\net8.0\VoloLinkApp.sourcelink.json

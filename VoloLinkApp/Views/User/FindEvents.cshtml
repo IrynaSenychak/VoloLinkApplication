@@ -1,0 +1,93 @@
+@model IEnumerable<VoloLinkApp.Models.Event>  
+@{  
+    ViewData["Title"] = "Пошук подій";  
+}  
+
+@section Styles {  
+    <link rel="stylesheet" href="~/css/events.css" />  
+}  
+
+<div class="profile-container">  
+<div class="profile-layout">  
+        @await Html.PartialAsync("_SideMenuPartial", (object)ViewBag.SideMenuData)  
+
+    <div class="events-container">  
+    <div class="search-section">  
+        <h1>Пошук волонтерських подій</h1>  
+        <form method="get" class="search-form">  
+            <div class="search-grid">  
+                <div class="search-item">  
+                    <label for="searchName">Назва події:</label>  
+                    <input type="text" id="searchName" name="searchName" value="@ViewBag.SearchName"   
+                           class="form-control" placeholder="Введіть назву події">  
+                </div>  
+                
+                <div class="search-item">  
+                    <label for="location">Локація:</label>  
+                    <input type="text" id="location" name="location" value="@ViewBag.Location"   
+                           class="form-control" placeholder="Введіть місце проведення">  
+                </div>  
+
+                <div class="search-item">  
+                    <label for="fromDate">Дата від:</label>  
+                    <input type="date" id="fromDate" name="fromDate" value="@ViewBag.FromDate"   
+                           class="form-control">  
+                </div>  
+
+                <div class="search-item">  
+                    <label for="toDate">Дата до:</label>  
+                    <input type="date" id="toDate" name="toDate" value="@ViewBag.ToDate"   
+                           class="form-control">  
+                </div>  
+
+                <div class="search-button">  
+                    <button type="submit" class="btn btn-primary">  
+                        <i class="fas fa-search"></i> Пошук  
+                    </button>  
+                </div>  
+            </div>  
+        </form>  
+    </div>  
+
+    <div class="events-grid">  
+        @if (!Model.Any())  
+        {  
+            <div class="no-events">  
+                <i class="fas fa-calendar-times"></i>  
+                <p>Не знайдено подій за вашим запитом</p>  
+            </div>  
+        }  
+        else  
+        {  
+            @foreach (var eventItem in Model)  
+            {  
+                <div class="event-card">  
+                    <div class="event-header">  
+                        <h3>@eventItem.Title</h3>  
+                        @if (eventItem.RequiresVerifiedVolunteer)  
+                        {  
+                            <span class="verified-badge">  
+                                <i class="fas fa-check-circle"></i> Верифіковані волонтери  
+                            </span>  
+                        }  
+                    </div>  
+                    <div class="event-info">  
+                        <p><i class="fas fa-map-marker-alt"></i> @eventItem.Location</p>  
+                        <p><i class="far fa-calendar-alt"></i> @eventItem.Date.ToString("dd.MM.yyyy HH:mm")</p>  
+                        <p><i class="fas fa-user"></i> Організатор: @eventItem.Creator.UserName</p>  
+                    </div>  
+                    <div class="event-description">  
+                        <p>@eventItem.Description</p>  
+                    </div>  
+                    <div class="event-actions">  
+                        <a href="@Url.Action("Details", "Event", new { id = eventItem.Id })" class="btn btn-primary">  
+                            <i class="fas fa-info-circle"></i> Детальніше  
+                        </a>  
+                    </div>  
+                </div>  
+            }  
+        }  
+    </div>  
+</div>  
+</div>  
+</div>
