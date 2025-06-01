@@ -12,97 +12,129 @@
         @await Html.PartialAsync("_SideMenuPartial", (object)ViewBag.SideMenuData)
 
         <div class="settings-content">
-            <h2>Налаштування профілю</h2>
+            <h2 class="text-center my-4">Налаштування профілю</h2>
 
-            <div class="settings-section">
-                <form asp-action="UpdateProfile" method="post">
-                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="settings-grid">
+                <!-- Profile Settings Card -->
+                <div class="settings-card">
+                    <div class="settings-card-header">
+                        <i class="fas fa-user-edit"></i>
+                        <h3>Особисті дані</h3>
+                    </div>
+                    <div class="settings-card-body">
+                        <form asp-action="UpdateProfile" method="post">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
-                    <div class="form-group">
-                        <label asp-for="UserName">Ім'я користувача</label>
-                        <input asp-for="UserName" class="form-control" />
-                        <span asp-validation-for="UserName" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label asp-for="FirstName">Ім'я</label>
-                        <input asp-for="FirstName" class="form-control" />
-                        <span asp-validation-for="FirstName" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label asp-for="LastName">Прізвище</label>
-                        <input asp-for="LastName" class="form-control" />
-                        <span asp-validation-for="LastName" class="text-danger"></span>
-                    </div>
-
-                    <div class="form-group">
-                        <label asp-for="Email">Email</label>
-                        <input asp-for="Email" class="form-control" disabled />
-                    </div>
-
-                    <div class="form-group">
-                        <button type="submit" class="btn btn-primary">Зберегти зміни</button>
-                    </div>
-                </form>
-            </div>
-
-            <div class="settings-section verification-section">
-                <h3>Верифікація волонтера</h3>
-                @if (ViewBag.IsVerifiedVolunteer)
-                {
-                    <div class="alert alert-success">
-                        <i class="fas fa-check-circle"></i> Ви вже верифікований волонтер
-                    </div>
-                }
-                else if (ViewBag.IsAdministrator)
-                {
-                    <div class="alert alert-info">
-                        <i class="fas fa-info-circle"></i> Як адміністратор, ви маєте повний доступ до системи
-                    </div>
-                }
-                else if (ViewBag.HasPendingRequest)
-                {
-                    <div class="alert alert-info">
-                        <i class="fas fa-clock"></i> Ваш запит на верифікацію в обробці
-                    </div>
-                }
-                else if (ViewBag.LastRejectedRequest != null)
-                {
-                    <div class="alert alert-warning">
-                        <h4><i class="fas fa-exclamation-circle"></i> Ваш останній запит було відхилено</h4>
-                        <p class="mb-2">Дата розгляду: @(((DateTime)ViewBag.LastRejectedRequest.ProcessedDate).ToString("dd.MM.yyyy HH:mm"))</p>
-                        @if (!string.IsNullOrEmpty(ViewBag.LastRejectedRequest.AdminResponse))
-                        {
-                            <p class="mb-3"><strong>Відповідь адміністратора:</strong></p>
-                            <p class="admin-response">@ViewBag.LastRejectedRequest.AdminResponse</p>
-                        }
-                        <form asp-action="RequestVerification" method="post" class="mt-3">
-                            <div class="form-group">
-                                <label for="verificationMessage">Нове повідомлення для адміністратора</label>
-                                <textarea name="message" id="verificationMessage" class="form-control"
-                                      rows="4" placeholder="Опишіть свій досвід волонтерства та чому ви хочете стати верифікованим волонтером"></textarea>
+                            <div class="form-floating mb-3">
+                                <input asp-for="UserName" class="form-control" placeholder="Ім'я користувача" />
+                                <label asp-for="UserName">Ім'я користувача</label>
+                                <span asp-validation-for="UserName" class="text-danger"></span>
                             </div>
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fas fa-user-check"></i> Подати нову заявку на верифікацію
-                            </button>
+
+                            <div class="form-floating mb-3">
+                                <input asp-for="FirstName" class="form-control" placeholder="Ім'я" />
+                                <label asp-for="FirstName">Ім'я</label>
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input asp-for="LastName" class="form-control" placeholder="Прізвище" />
+                                <label asp-for="LastName">Прізвище</label>
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-floating mb-4">
+                                <input asp-for="PhoneNumber" class="form-control" placeholder="Номер телефону" />
+                                <label asp-for="PhoneNumber">Номер телефону</label>
+                                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-floating mb-4">
+                                <input asp-for="Email" class="form-control" placeholder="Email" disabled />
+                                <label asp-for="Email">Email</label>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-save"></i> Зберегти зміни
+                                </button>
+                            </div>
                         </form>
                     </div>
-                }
-                else
-                {
+                </div>
 
-                    <form asp-action="RequestVerification" method="post">
-                        <div class="form-group">
-                            <label for="verificationMessage">Повідомлення для адміністратора</label>
-                            <textarea name="message" id="verificationMessage" class="form-control" 
-                                    rows="4" placeholder="Опишіть свій досвід волонтерства та чому ви хочете стати верифікованим волонтером"></textarea>
+                <div class="settings-section verification-section">
+                    <h3 class="text-center my-4">Верифікація волонтера</h3>
+                    @if (ViewBag.IsVerifiedVolunteer)
+                    {
+                        <div class="alert alert-success">
+                            <i class="fas fa-check-circle"></i> Ви вже верифікований волонтер
                         </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-user-check"></i> Подати заявку на верифікацію
-                        </button>
-                    </form>
-                }
+                    }
+                    else if (ViewBag.IsAdministrator)
+                    {
+                        <div class="alert alert-info">
+                            <i class="fas fa-info-circle"></i> Як адміністратор, ви маєте повний доступ до системи
+                        </div>
+                    }
+                    else if (ViewBag.HasPendingRequest)
+                    {
+                        <div class="alert alert-info">
+                            <i class="fas fa-clock"></i> Ваш запит на верифікацію в обробці
+                        </div>
+                    }
+                    else if (ViewBag.LastRejectedRequest != null)
+                    {
+                        <div class="alert alert-warning">
+                            <h4><i class="fas fa-exclamation-circle"></i> Ваш останній запит було відхилено</h4>
+                            <p class="mb-2">Дата розгляду: @(((DateTime)ViewBag.LastRejectedRequest.ProcessedDate).ToString("dd.MM.yyyy HH:mm"))</p>
+                            @if (!string.IsNullOrEmpty(ViewBag.LastRejectedRequest.AdminResponse))
+                            {
+                                <p class="mb-3"><strong>Відповідь адміністратора:</strong></p>
+                                <p class="admin-response">@ViewBag.LastRejectedRequest.AdminResponse</p>
+                            }
+                            <form asp-action="RequestVerification" method="post" class="mt-4">
+                                <div class="form-group mb-4">
+                                    <label for="verificationMessage" class="form-label mb-2">
+                                        Нове повідомлення для адміністратора
+                                    </label>
+                                    <textarea name="message"
+                                          id="verificationMessage"
+                                          class="form-control"
+                                          rows="4"
+                                          placeholder="Опишіть свій досвід волонтерства та чому ви хочете стати верифікованим волонтером">
+        </textarea>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-primary btn-lg">
+                                        <i class="fas fa-user-check me-2"></i>
+                                        Подати нову заявку на верифікацію
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    }
+                    else
+                    {
+
+                        <form asp-action="RequestVerification" method="post">
+                            <div class="form-floating mb-4">
+                                <textarea name="message"
+                                      id="verificationMessage"
+                                      class="form-control"
+                                      rows="4"
+                                      placeholder="Опишіть свій досвід волонтерства"></textarea>
+                                <label for="verificationMessage">Повідомлення для адміністратора</label>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <i class="fas fa-user-check me-2"></i>
+                                    Подати заявку на верифікацію
+                                </button>
+                            </div>
+                        </form>
+                    }
+                </div>
             </div>
         </div>
     </div>

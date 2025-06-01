@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VoloLinkApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c63fe47f0339d41aadc8eb28b6e407b3dcc00304")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+76f00528e59c25981f923fdd32a9be2695477686")]
 [assembly: System.Reflection.AssemblyProductAttribute("VoloLinkApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VoloLinkApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

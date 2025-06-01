@@ -1,5 +1,7 @@
 using System.ComponentModel.DataAnnotations;
 
+
+
 namespace VoloLinkApp.Models
 {
     public class UserSettingsViewModel
@@ -15,6 +17,11 @@ namespace VoloLinkApp.Models
         [Required(ErrorMessage = "Прізвище обов'язкове")]
         [Display(Name = "Прізвище")]
         public string LastName { get; set; }
+
+        [Phone(ErrorMessage = "Невірний формат номера телефону")]
+        [Display(Name = "Номер телефону")]
+        public string? PhoneNumber { get; set; }
+
 
         [Display(Name = "Email")]
         public string Email { get; set; }
