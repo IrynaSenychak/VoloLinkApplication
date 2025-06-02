@@ -43,11 +43,7 @@ namespace VoloLinkApp.Controllers
 
             return View(upcomingEvents);
 
-          
-
-            //var user = await _userManager.GetUserAsync(User);
-            //ViewBag.FirstName = user?.FirstName ?? "Guest"; // ѕередаЇмо ≥м'€ у ViewBag
-            //return View();
+         
         }
 
         public IActionResult Privacy()

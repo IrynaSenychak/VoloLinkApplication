@@ -12,15 +12,12 @@ public class VoloLinkDbContext : IdentityDbContext<VoloLinkUser>
         : base(options)
     {
     }
-
     public DbSet<Event> Events { get; set; }
 
     public DbSet<VerificationRequest> VerificationRequests { get; set; }
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        base.OnModelCreating(builder);
-
-        // Configure many-to-many relationship between users and events
+        base.OnModelCreating(builder);    
         builder.Entity<Event>()
         .HasMany(e => e.Participants)
         .WithMany(u => u.ParticipatingEvents)
@@ -30,21 +27,34 @@ public class VoloLinkDbContext : IdentityDbContext<VoloLinkUser>
                 .HasOne<VoloLinkUser>()
                 .WithMany()
                 .HasForeignKey("ParticipantsId")
-                .OnDelete(DeleteBehavior.Restrict), // не видаляти автоматично
+                .OnDelete(DeleteBehavior.Restrict), 
             j => j
                 .HasOne<Event>()
                 .WithMany()
                 .HasForeignKey("ParticipatingEventsId")
-                .OnDelete(DeleteBehavior.Cascade) // або Restrict
+                .OnDelete(DeleteBehavior.Cascade) 
+        );
+        builder.Entity<Event>()
+        .HasMany(e => e.AttendedParticipants)
+        .WithMany()
+        .UsingEntity<Dictionary<string, object>>(
+            "EventAttendance",
+            j => j
+                .HasOne<VoloLinkUser>()
+                .WithMany()
+                .HasForeignKey("UserId")
+                .OnDelete(DeleteBehavior.Restrict),
+            j => j
+                .HasOne<Event>()
+                .WithMany()
+                .HasForeignKey("EventId")
+                .OnDelete(DeleteBehavior.Cascade)
         );
 
-        // Configure one-to-many relationship for event creator
         builder.Entity<Event>()
             .HasOne(e => e.Creator)
             .WithMany(u => u.CreatedEvents)
             .HasForeignKey(e => e.CreatorId);
-
-
     }
 }
 

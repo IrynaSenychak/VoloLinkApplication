@@ -12,13 +12,11 @@ namespace VoloLinkApp.Areas.Identity.Data;
 public class VoloLinkUser : IdentityUser
 {
     [MaxLength(50)]
-    public string FirstName { get; set; }  
-
+    public string FirstName { get; set; }
     [MaxLength(50)]
-    public string LastName { get; set; }  
-
-    // Navigation properties
+    public string LastName { get; set; }
     public ICollection<Event> CreatedEvents { get; set; }
     public ICollection<Event> ParticipatingEvents { get; set; }
+
 }
 

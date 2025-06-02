@@ -1,0 +1,209 @@
+@model UserPublicProfileViewModel
+
+@{
+    ViewData["Title"] = $"Профіль - {Model.FirstName} {Model.LastName}";
+}
+@section Styles {
+    <link rel="stylesheet" href="~/css/profile.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+}
+
+<div class="profile-container">
+    <div class="profile-layout">
+        @await Html.PartialAsync("_SideMenuPartial", (object)ViewBag.SideMenuData)
+
+        <div class="public-profile-content">
+            <div class="profile-header">
+                <div class="profile-avatar">
+                    <i class="fas fa-user-circle fa-4x"></i>
+                </div>
+                <div class="profile-info">
+                    <h1>@Model.FirstName @Model.LastName</h1>
+                    <p class="username">@@@Model.UserName</p>
+                    @if (Model.IsVerifiedVolunteer)
+                    {
+                        <span class="verified-badge" title="Верифікований волонтер">
+                            <i class="fas fa-check-circle"></i> Верифікований волонтер
+                        </span>
+                    }
+                </div>
+            </div>
+
+            <div class="profile-sections">
+                <div class="section stats-section">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <i class="fas fa-calendar-plus"></i>
+                            <h3>Створено подій</h3>
+                            <p class="stat-number">@Model.CreatedEvents</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-users"></i>
+                            <h3>Участь у подіях</h3>
+                            <p class="stat-number">@Model.AttendedEvents</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-sections">
+                <div class="section attended-events">
+                    <h2>
+                        <i class="fas fa-calendar-check"></i>
+                        Відвідані події (@Model.AttendedEvents)
+                    </h2>
+                    <div class="events-list">
+                        @if (Model.AttendedEvents > 0)
+                        {
+                            @if (Model.AttendedEventsList != null && Model.AttendedEventsList.Any())
+                            {
+                                <div class="events-grid">
+                                    @foreach (var evt in Model.AttendedEventsList)
+                                    {
+                                        <div class="event-card">
+                                            <div class="event-card-header">
+                                                <h3>@evt.Title</h3>
+                                                <span class="event-date">
+                                                    <i class="fas fa-calendar"></i>
+                                                    @evt.Date.ToString("dd MMMM yyyy, HH:mm")
+                                                </span>
+                                            </div>
+                                            <div class="event-card-content">
+                                                <p class="event-location">
+                                                    <i class="fas fa-map-marker-alt"></i>
+                                                    @evt.Location
+                                                </p>
+                                                <p class="participants-count">
+                                                    <i class="fas fa-users"></i>
+                                                    Учасників: @evt.Participants.Count
+                                                </p>
+                                                @if (evt.RequiresVerifiedVolunteer)
+                                                {
+                                                    <span class="requirement-badge">
+                                                        <i class="fas fa-shield-alt"></i>
+                                                        Верифікований волонтер
+                                                    </span>
+                                                }
+                                                <a asp-controller="Event" asp-action="Details" asp-route-id="@evt.Id"
+                                                   class="btn btn-outline">
+                                                    <i class="fas fa-info-circle"></i> Деталі
+                                                </a>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <p class="text-muted text-center">Немає відвіданих подій</p>
+                            }
+                        }
+                        else
+                        {
+                            <p class="text-muted text-center">Користувач ще не відвідав жодної події</p>
+                        }
+                    </div>
+                </div>
+
+                <div class="section upcoming-events">
+                    <h2><i class="fas fa-calendar-alt"></i> Участь у подіях</h2>
+                    <div class="events-list">
+                        @if (Model.ParticipatingEvents > 0)
+                        {
+                            @if (Model.UpcomingParticipatingEvents != null && Model.UpcomingParticipatingEvents.Any())
+                            {
+                                <div class="events-grid">
+                                    @foreach (var evt in Model.UpcomingParticipatingEvents)
+                                    {
+                                        <div class="event-card">
+                                            <div class="event-card-header">
+                                                <h3>@evt.Title</h3>
+                                                <span class="event-date">
+                                                    <i class="fas fa-calendar"></i>
+                                                    @evt.Date.ToString("dd MMMM yyyy, HH:mm")
+                                                </span>
+                                            </div>
+                                            <div class="event-card-content">
+                                                <p class="event-location">
+                                                    <i class="fas fa-map-marker-alt"></i>
+                                                    @evt.Location
+                                                </p>
+                                                <a asp-controller="Event" asp-action="Details" asp-route-id="@evt.Id"
+                                                   class="btn btn-outline">
+                                                    <i class="fas fa-info-circle"></i> Деталі
+                                                </a>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <p class="text-muted text-center">Немає подій</p>
+                            }
+                        }
+                        else
+                        {
+                            <p class="text-muted text-center">Користувач ще не бере участі в подіях</p>
+                        }
+                    </div>
+                </div>
+
+                <div class="section created-events">
+                    <h2><i class="fas fa-tasks"></i> Організовані події</h2>
+                    <div class="events-list">
+                        @if (Model.CreatedEvents > 0)
+                        {
+                            @if (Model.CreatedEventsList != null && Model.CreatedEventsList.Any())
+                            {
+                                <div class="events-grid">
+                                    @foreach (var evt in Model.CreatedEventsList)
+                                    {
+                                        <div class="event-card">
+                                            <div class="event-card-header">
+                                                <h3>@evt.Title</h3>
+                                                <span class="event-date">
+                                                    <i class="fas fa-calendar"></i>
+                                                    @evt.Date.ToString("dd MMMM yyyy, HH:mm")
+                                                </span>
+                                            </div>
+                                            <div class="event-card-content">
+                                                <p class="event-location">
+                                                    <i class="fas fa-map-marker-alt"></i>
+                                                    @evt.Location
+                                                </p>
+                                                <p class="participants-count">
+                                                    <i class="fas fa-users"></i>
+                                                    Учасників: @evt.Participants.Count
+                                                </p>
+                                                @if (evt.RequiresVerifiedVolunteer)
+                                                {
+                                                    <span class="requirement-badge">
+                                                        <i class="fas fa-shield-alt"></i>
+                                                        Верифікований волонтер
+                                                    </span>
+                                                }
+                                                <a asp-controller="Event" asp-action="Details" asp-route-id="@evt.Id"
+                                                   class="btn btn-outline">
+                                                    <i class="fas fa-info-circle"></i> Деталі
+                                                </a>
+                                            </div>
+                                        </div>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <p class="text-muted text-center">Немає створених подій</p>
+                            }
+                        }
+                        else
+                        {
+                            <p class="text-muted text-center">Користувач ще не створив жодної події</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -17,6 +17,65 @@ namespace VoloLinkApp.Controllers
             _userManager = userManager;
             _context = context;
         }
+        public async Task<IActionResult> ViewProfile(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+            {
+                return NotFound();
+            }
+
+            var currentUser = await _userManager.GetUserAsync(User);
+            var roles = await _userManager.GetRolesAsync(currentUser);
+            ViewBag.SideMenuData = currentUser;
+            ViewBag.IsVerifiedVolunteer = roles.Contains("VerifiedVolunteer");
+            ViewBag.IsAdministrator = roles.Contains("Administrator");
+
+            var events = await _context.Events
+       .Include(e => e.Creator)
+       .Include(e => e.Participants)
+       .Include(e => e.AttendedParticipants)  // Include attended participants
+       .Where(e => e.Participants.Contains(user))
+       .ToListAsync();
+
+
+            var participatingEvents = await _context.Events
+                .Include(e => e.Creator)
+                .Include(e => e.Participants)
+                .Where(e => e.Participants.Any(p => p.Id == user.Id))
+                .OrderBy(e => e.Date)
+                .ToListAsync();
+
+            
+            var createdEvents = await _context.Events
+                .Include(e => e.Creator)
+                .Include(e => e.Participants)
+                .Where(e => e.CreatorId == user.Id)
+                .OrderBy(e => e.Date)
+                .ToListAsync();
+
+            var viewModel = new UserPublicProfileViewModel
+            {
+                UserName = user.UserName,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                IsVerifiedVolunteer = await _userManager.IsInRoleAsync(user, "VerifiedVolunteer"),
+                CreatedEvents = createdEvents.Count,
+                ParticipatingEvents = participatingEvents.Count,
+                AttendedEvents = events.Count(e => e.IsCompleted && e.AttendedParticipants.Any(p => p.Id == user.Id)),
+
+                UpcomingParticipatingEvents = participatingEvents,
+                CreatedEventsList = createdEvents,
+                AttendedEventsList = events
+            .Where(e => e.IsCompleted && e.AttendedParticipants.Any(p => p.Id == user.Id))
+            .OrderByDescending(e => e.Date)
+            .Take(5)
+            .ToList()
+
+            };
+
+            return View(viewModel);
+        }
 
         [Authorize]
         public async Task<IActionResult> Profile()
@@ -75,7 +134,7 @@ namespace VoloLinkApp.Controllers
             var currentUser = await _userManager.GetUserAsync(User);
             if (currentUser == null) return NotFound();
 
-            // Check if username is already taken (but not by current user)
+          
             if (currentUser.UserName != model.UserName)
             {
                 var existingUser = await _userManager.FindByNameAsync(model.UserName);
@@ -93,12 +152,12 @@ namespace VoloLinkApp.Controllers
 
             try
             {
-                // Update user properties
+             
                 currentUser.UserName = model.UserName;
                 currentUser.FirstName = model.FirstName;
                 currentUser.LastName = model.LastName;
 
-                // Try to update the user
+               
                 var result = await _userManager.UpdateAsync(currentUser);
 
                 if (result.Succeeded)
@@ -107,7 +166,7 @@ namespace VoloLinkApp.Controllers
                     return RedirectToAction(nameof(Settings));
                 }
 
-                // If update failed, add errors to ModelState
+               
                 foreach (var error in result.Errors)
                 {
                     ModelState.AddModelError("", error.Description);
@@ -115,11 +174,11 @@ namespace VoloLinkApp.Controllers
             }
             catch (Exception ex)
             {
-                // Log the exception
+                
                 ModelState.AddModelError("", "Виникла помилка при оновленні профілю");
             }
 
-            // If we got here, something failed
+          
             ViewBag.SideMenuData = currentUser;
             ViewBag.IsVerifiedVolunteer = await _userManager.IsInRoleAsync(currentUser, "VerifiedVolunteer");
             ViewBag.IsAdministrator = await _userManager.IsInRoleAsync(currentUser, "Administrator");
@@ -130,8 +189,8 @@ namespace VoloLinkApp.Controllers
         }
 
         [HttpPost]
-        [Authorize]  // Add this attribute
-        [ValidateAntiForgeryToken]  // Add this for security
+        [Authorize]  
+        [ValidateAntiForgeryToken]  
         public async Task<IActionResult> RequestVerification(string message)
         {
             if (string.IsNullOrWhiteSpace(message))
@@ -143,7 +202,6 @@ namespace VoloLinkApp.Controllers
             var user = await _userManager.GetUserAsync(User);
             if (user == null) return NotFound();
 
-            // Check if user already has a pending request
             var existingRequest = await _context.VerificationRequests
                 .AnyAsync(r => r.UserId == user.Id && r.Status == "Pending");
 
@@ -169,17 +227,11 @@ namespace VoloLinkApp.Controllers
         }
 
         public async Task<IActionResult> FindEvents(string searchName, string location, DateTime? fromDate, DateTime? toDate)
-        {
-           
-
-           
-
+        {            
             var user = await _userManager.GetUserAsync(User);
             var roles = user != null ? await _userManager.GetRolesAsync(user) : new List<string>();
             var isVerifiedVolunteer = roles.Contains("VerifiedVolunteer");
-            var isAdmin = roles.Contains("Administrator");
-
-            // Set up side menu data
+            var isAdmin = roles.Contains("Administrator");         
             ViewBag.SideMenuData = user;
             ViewBag.IsVerifiedVolunteer = isVerifiedVolunteer;
             ViewBag.IsAdministrator = isAdmin;
@@ -188,36 +240,31 @@ namespace VoloLinkApp.Controllers
                 .Where(e => e.Date >= DateTime.Now)
                 .Where(e => !e.RequiresVerifiedVolunteer ||
                            (e.RequiresVerifiedVolunteer && (isVerifiedVolunteer || isAdmin)));
-
             if (!string.IsNullOrEmpty(searchName))
             {
                 query = query.Where(e => e.Title.Contains(searchName));
             }
-
             if (!string.IsNullOrEmpty(location))
             {
                 query = query.Where(e => e.Location.Contains(location));
             }
-
             if (fromDate.HasValue)
             {
                 query = query.Where(e => e.Date >= fromDate.Value);
             }
-
             if (toDate.HasValue)
             {
                 query = query.Where(e => e.Date <= toDate.Value);
             }
-
             var events = await query.OrderBy(e => e.Date).ToListAsync();
-
             ViewBag.SearchName = searchName;
             ViewBag.Location = location;
             ViewBag.FromDate = fromDate?.ToString("yyyy-MM-dd");
             ViewBag.ToDate = toDate?.ToString("yyyy-MM-dd");
-
             return View(events);
         }
+
+
         [AllowAnonymous]
         public IActionResult Guest()
         {
