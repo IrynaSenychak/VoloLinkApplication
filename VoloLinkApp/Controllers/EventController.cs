@@ -19,7 +19,7 @@ namespace VoloLinkApp.Controllers
             _userManager = userManager;
         }
 
-        // Get all events
+      
         public async Task<IActionResult> Index()
         {
             var events = await _context.Events
@@ -88,6 +88,11 @@ namespace VoloLinkApp.Controllers
             if (@event == null)
             {
                 return NotFound();
+            }
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                return View("PublicDetails", @event);
             }
 
             var currentUser = await _userManager.GetUserAsync(User);

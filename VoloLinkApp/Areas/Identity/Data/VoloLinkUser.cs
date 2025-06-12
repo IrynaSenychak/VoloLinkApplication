@@ -8,7 +8,7 @@ using VoloLinkApp.Models;
 
 namespace VoloLinkApp.Areas.Identity.Data;
 
-// Add profile data for application users by adding properties to the VoloLinkUser class
+
 public class VoloLinkUser : IdentityUser
 {
     [MaxLength(50)]

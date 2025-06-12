@@ -86,7 +86,16 @@ namespace VoloLinkApp.Controllers
                 return RedirectToAction("Guest");
             }
             ViewBag.SideMenuData = user;
+            var attendedEventsCount = await _context.Events
+        .CountAsync(e => e.IsCompleted && e.AttendedParticipants.Any(p => p.Id == user.Id));
+
+            // Count created events (already in your model)
+            var createdEventsCount = await _context.Events
+                .CountAsync(e => e.CreatorId == user.Id);
+
             var roles = await _userManager.GetRolesAsync(user);
+            ViewBag.AttendedEventsCount = attendedEventsCount;
+            ViewBag.CreatedEventsCount = createdEventsCount;
             ViewBag.UserRole = roles.FirstOrDefault() ?? "User";
             ViewBag.IsVerifiedVolunteer = roles.Contains("VerifiedVolunteer");
             ViewBag.IsAdministrator = roles.Contains("Administrator");

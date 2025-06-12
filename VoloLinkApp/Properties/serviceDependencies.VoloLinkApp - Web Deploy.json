@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "mssql2": {
+      "serviceConnectorResourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('serviceConnectorResourceGroupName')]/providers/Microsoft.Web/sites/VoloLinkApp/providers/Microsoft.ServiceLinker/linkers/ConnectionStringsDatabaseConnection_FA2CD0C87B",
+      "secretStore": "AzureAppSettings",
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/vololinkserver/databases/VoloDatabase",
+      "type": "mssql.azure",
+      "connectionId": "ConnectionStrings:DatabaseConnection"
+    }
+  }
+}

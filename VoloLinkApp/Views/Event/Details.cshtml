@@ -23,7 +23,7 @@
                 <div class="event-meta">
                     <div class="meta-item">
                         <i class="fas fa-calendar"></i>
-                        <span>@Model.Date.ToString("dd MMMM yyyy, HH:mm")</span>
+                        <span>@Model.Date.ToString("dd MMMM yyyy, HH:mm", new System.Globalization.CultureInfo("uk-UA"))</span>
                     </div>
                     <div class="meta-item">
                         <i class="fas fa-map-marker-alt"></i>
@@ -179,7 +179,31 @@
                                 </div>
                             }
                         }
-                        // ... rest of the existing code ...
+                        else
+                        {
+                            @foreach (var participant in Model.Participants)
+                            {
+                                <div class="participant-row">
+                                    <div class="participant-info">
+                                        <i class="fas fa-user-circle"></i>
+                                        <div class="participant-details">
+                                            <a asp-controller="User" asp-action="ViewProfile"
+                                               asp-route-id="@participant.Id"
+                                               class="participant-name">
+                                                @($"{participant.FirstName} {participant.LastName}")
+                                                <small>(@participant.UserName)</small>
+                                            </a>
+                                            @if (await UserManager.IsInRoleAsync(participant, "VerifiedVolunteer"))
+                                            {
+                                                <span class="verified-badge" title="Верифікований волонтер">
+                                                    <i class="fas fa-check-circle"></i>
+                                                </span>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
                     </div>
                 
                 </div>
