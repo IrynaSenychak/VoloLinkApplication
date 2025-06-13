@@ -1,101 +1,213 @@
+@using Microsoft.AspNetCore.Identity
+@using VoloLinkApp.Areas.Identity.Data
+@inject UserManager<VoloLinkUser> UserManager
+
 @model VoloLinkApp.Models.Event
 @{
     ViewData["Title"] = Model.Title;
 }
 
 @section Styles {
-    <link rel="stylesheet" href="~/css/events.css" />
+    <link rel="stylesheet" href="~/css/events_vololink.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 }
 
 
 <div class="profile-container">
     <div class="profile-layout">
-@await Html.PartialAsync("_SideMenuPartial", (object)ViewBag.SideMenuData)
+        @await Html.PartialAsync("_SideMenuPartial", (object)ViewBag.SideMenuData)
 
-<div class="event-details-container">
-    <div class="event-header">
-        <h1>@Model.Title</h1>
-        <div class="event-meta">
-            <span class="event-date">
-                <i class="fas fa-calendar"></i>
-                @Model.Date.ToString("dd MMMM yyyy, HH:mm")
-            </span>
-            <span class="event-location">
-                <i class="fas fa-map-marker-alt"></i>
-                @Model.Location
-            </span>
-        </div>
-    </div>
-
-    <div class="event-content">
-        <div class="event-description">
-            <h2>Опис події</h2>
-            <p>@Model.Description</p>
-        </div>
-
-        <div class="event-organizer">
-            <h2>Організатор</h2>
-            <div class="organizer-info">
-                <i class="fas fa-user-circle fa-2x"></i>
-                <span>@Model.Creator.UserName</span>
-            </div>
-        </div>
-
-        <div class="event-requirements">
-            @if (Model.RequiresVerifiedVolunteer)
-            {
-                <div class="requirement-badge">
-                    <i class="fas fa-shield-alt"></i>
-                    Потрібна верифікація волонтера
-                </div>
-            }
-        </div>
-
-        <div class="event-participants">
-            <h2>Учасники (@Model.Participants.Count)</h2>
-            <div class="participants-list">
-                @foreach (var participant in Model.Participants)
-                {
-                    <div class="participant">
-                        <i class="fas fa-user-circle"></i>
-                        <span>@participant.UserName</span>
+        <div class="event-details-container">
+            <div class="event-header">
+                <h1 class="event-title">@Model.Title</h1>
+                <div class="event-meta">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>@Model.Date.ToString("dd MMMM yyyy, HH:mm", new System.Globalization.CultureInfo("uk-UA"))</span>
                     </div>
-                }
+                    <div class="meta-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>@Model.Location</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="event-content">
+                <div class="content-grid">
+                    <div class="main-info">
+                        <div class="content-card event-description">
+                            <h2><i class="fas fa-info-circle"></i> Опис події</h2>
+                            <p>@Model.Description</p>
+                        </div>
+
+                        <div class="content-card event-requirements">
+                            <h2><i class="fas fa-clipboard-list"></i> Вимоги</h2>
+                            @if (Model.RequiresVerifiedVolunteer)
+                            {
+                                <div class="requirement-badge">
+                                    <i class="fas fa-shield-alt"></i>
+                                    <span>Потрібна верифікація волонтера</span>
+                                </div>
+                            }
+                            else
+                            {
+                                <p class="text-muted">Спеціальних вимог немає</p>
+                            }
+                        </div>
+                    </div>
+
+                    <div class="side-info">
+                        <div class="content-card event-organizer">
+                            <h2><i class="fas fa-user"></i> Організатор</h2>
+                            <div class="organizer-info">
+                                <div class="organizer-avatar">
+                                    <i class="fas fa-user-circle fa-2x"></i>
+                                </div>
+                                <div class="organizer-details">
+                                    <a asp-controller="User" asp-action="ViewProfile"
+                                       asp-route-id="@Model.Creator.Id"
+                                       class="organizer-name">
+                                        @Model.Creator.UserName
+                                    </a>
+                                    @if (await UserManager.IsInRoleAsync(Model.Creator, "VerifiedVolunteer"))
+                                    {
+                                        <span class="verified-badge" title="Верифікований волонтер">
+                                            <i class="fas fa-check-circle"></i>
+                                        </span>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                        @if (!ViewBag.IsCreator)
+                        {
+                            <div class="content-card event-actions">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    @if (!ViewBag.IsParticipating)
+                                    {
+                                        <form asp-action="JoinEvent" asp-route-id="@Model.Id" method="post">
+                                            <button type="submit" class="btn btn-primary btn-block">
+                                                <i class="fas fa-plus-circle"></i> Долучитись до події
+                                            </button>
+                                        </form>
+                                    }
+                                    else
+                                    {
+                                        <form asp-action="WithdrawFromEvent" asp-route-id="@Model.Id" method="post">
+                                            <button type="submit" class="btn btn-danger btn-block">
+                                                <i class="fas fa-times-circle"></i> Відмовитись від участі
+                                            </button>
+                                        </form>
+                                    }
+                                }
+                                else
+                                {
+                                    <a href="@Url.Page("/Account/Login", new { area = "Identity" })" class="btn btn-primary btn-block">
+                                        <i class="fas fa-sign-in-alt"></i> Увійдіть щоб долучитись
+                                    </a>
+                                }
+                            </div>
+                        }
+                    </div>
+                </div>
+
+                <div class="content-card participants-section">
+                    <h2><i class="fas fa-users"></i> Учасники (@Model.Participants.Count)</h2>
+                    <div class="participants-list">
+                        @if (ViewBag.IsCreator)
+                        {
+                            <div class="attendance-header">
+                                @if (!Model.IsCompleted)
+                                {
+                                    <form asp-action="MarkEventComplete" asp-route-id="@Model.Id" method="post" style="margin-bottom: 20px;">
+                                        <button type="submit" class="btn btn-success" onclick="return confirm('Позначити подію як завершену? Це дозволить зарахувати відвідуваність учасників.')">
+                                            <i class="fas fa-check"></i> Позначити подію як завершену
+                                        </button>
+                                    </form>
+                                }
+                            </div>
+
+                            @foreach (var participant in Model.Participants)
+                            {
+                                <div class="participant-row">
+                                    <div class="participant-info">
+                                        <i class="fas fa-user-circle"></i>
+                                        <div class="participant-details">
+                                            <div class="name-container">
+                                                <a asp-controller="User" asp-action="ViewProfile"
+                                                   asp-route-id="@participant.Id"
+                                                   class="participant-name">
+                                                    <span class="full-name">@participant.FirstName @participant.LastName</span>
+                                                    <span class="username">@participant.UserName</span>
+                                                </a>
+                                                @if (await UserManager.IsInRoleAsync(participant, "VerifiedVolunteer"))
+                                                {
+                                                    <span class="verified-badge" title="Верифікований волонтер">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </span>
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="participant-actions">
+                                        @if (Model.IsCompleted)
+                                        {
+                                            bool hasAttended = Model.AttendedParticipants.Any(p => p.Id == participant.Id);
+                                            <form asp-action="MarkAttendance"
+                                                  asp-route-eventId="@Model.Id"
+                                                  asp-route-userId="@participant.Id"
+                                                  asp-route-attended="@(!hasAttended)"
+                                                  method="post" style="margin-right: 10px;">
+                                                <button type="submit" class="btn @(hasAttended ? "btn-success" : "btn-secondary") btn-sm">
+                                                    <i class="fas @(hasAttended ? "fa-check" : "fa-times")"></i>
+                                                    @(hasAttended ? "Присутній" : "Відсутній")
+                                                </button>
+                                            </form>
+                                        }
+                                        <form asp-action="RemoveParticipant"
+                                              asp-route-eventId="@Model.Id"
+                                              asp-route-userId="@participant.Id"
+                                              method="post">
+                                            <button type="submit"
+                                                    class="btn btn-danger btn-sm"
+                                                    onclick="return confirm('Видалити учасника?')">
+                                                <i class="fas fa-user-minus"></i>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            }
+                        }
+                        else
+                        {
+                            @foreach (var participant in Model.Participants)
+                            {
+                                <div class="participant-row">
+                                    <div class="participant-info">
+                                        <i class="fas fa-user-circle"></i>
+                                        <div class="participant-details">
+                                            <a asp-controller="User" asp-action="ViewProfile"
+                                               asp-route-id="@participant.Id"
+                                               class="participant-name">
+                                                @($"{participant.FirstName} {participant.LastName}")
+                                                <small>(@participant.UserName)</small>
+                                            </a>
+                                            @if (await UserManager.IsInRoleAsync(participant, "VerifiedVolunteer"))
+                                            {
+                                                <span class="verified-badge" title="Верифікований волонтер">
+                                                    <i class="fas fa-check-circle"></i>
+                                                </span>
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+                
+                </div>
             </div>
         </div>
-
-        @if (!ViewBag.IsCreator)
-        {
-            <div class="event-actions">
-                @if (User.Identity.IsAuthenticated)
-                {
-                    @if (!ViewBag.IsParticipating)
-                    {
-                        <form asp-action="JoinEvent" asp-route-id="@Model.Id" method="post">
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fas fa-plus-circle"></i> Долучитись до події
-                            </button>
-                        </form>
-                    }
-                    else
-                    {
-                        <form asp-action="WithdrawFromEvent" asp-route-id="@Model.Id" method="post">
-                            <button type="submit" class="btn btn-danger">
-                                <i class="fas fa-times-circle"></i> Відмовитись від участі
-                            </button>
-                        </form>
-                    }
-                }
-                else
-                {
-                    <a href="@Url.Page("/Account/Login", new { area = "Identity" })" class="btn btn-primary">
-                        <i class="fas fa-sign-in-alt"></i> Увійдіть щоб долучитись
-                    </a>
-                }
-            </div>
-        }
-    </div>
-</div>
     </div>
 </div>

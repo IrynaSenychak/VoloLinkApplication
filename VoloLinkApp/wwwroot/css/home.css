@@ -1,25 +1,24 @@
 ﻿body {
-    background-color: rgba(39, 232, 65, 0.2); /* Light transparent green */
-    /* min-height: 100vh;*/
-}
+    background-color: rgba(39, 232, 65, 0.2); 
+  
 .site-container {
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
     margin: 0 0 !important;
-  /*  padding: 1rem 3rem 1rem 3rem;*/
+ 
 }
 
 
 
 .frame-5 {
-    padding-top: 100px; /* або скільки потрібно для відступу від хедера */
-    /*background: url('/images/bgvolo.png') center center;*/
+    padding-top: 100px; 
+   
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
     display: flex;
-    justify-content: center; /* центрірує .frame-img */
+    justify-content: center; 
 }
 .rectangle-7 {
     margin: 0 auto;
@@ -48,16 +47,7 @@
     color: #ffffff;
 }
 
-/*.div {*/
-    /*color: #ffffff;*/
-    /*text-align: center;
-    font-family: "Inter-Black", sans-serif;
-    font-size: 60px;
-    font-weight: 900;
-    position: relative;
-    width: 917px;
-    height: 146px;
-}*/
+
 
 .text-block {
     display: flex;
@@ -109,14 +99,14 @@
 }
 
 
-/* ---------- Головний контейнер ---------- */
+
 .landing-container {
     text-align: center;
     padding: 60px 20px;
     background: #f8f9fa;
 }
 
-    /* ---------- Заголовок ---------- */
+
     .landing-container h1 {
         font-size: 2.5rem;
         font-weight: bold;
@@ -124,7 +114,7 @@
         margin-bottom: 20px;
     }
 
-    /* ---------- Опис під заголовком ---------- */
+
     .landing-container p {
         font-size: 1.2rem;
         color: #666;
@@ -132,7 +122,7 @@
         margin: 0 auto 40px;
     }
 
-/* ---------- Контейнер кнопок ---------- */
+
 .landing-buttons {
     display: flex;
     justify-content: center;
@@ -171,7 +161,7 @@
         color: white;
     }
 
-/* ---------- Сітка подій ---------- */
+
 .events-container {
     padding: 50px 20px;
     background: white;
@@ -235,7 +225,7 @@
         background: #218838;
     }
 
-/* ---------- Hero Section ---------- */
+
 .main-content {
     max-width: 1600px;
     margin: 0 auto;

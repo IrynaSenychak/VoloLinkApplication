@@ -32,80 +32,101 @@
     {
 
         <div class="profile-layout">
-            <!-- Left Side Menu -->
+          
             <div class="profile-container">
                 <div class="profile-layout">
                     @await Html.PartialAsync("_SideMenuPartial", (object)ViewBag.SideMenuData)
 
 
-                    <!-- Volunteer Profile View -->
-            <div class="main-content">
-        <div class="profile-header">
-            <div class="profile-avatar">
-                <i class="fas fa-user-circle fa-4x"></i>
-            </div>
-            <div class="profile-info">
-                <h1>@Model.FirstName</h1>
-                <span class="role-badge @(ViewBag.IsVerifiedVolunteer ? "verified" : "")">
-                            @(ViewBag.IsAdministrator ? "Адміністратор" : (ViewBag.IsVerifiedVolunteer ? "Верифікований волонтер" : "Волонтер"))
-                </span>
-            </div>
-        </div>
+                    
+                    <div class="main-content">
+                        <div class="profile-header">
+                            <div class="profile-avatar">
+                                <i class="fas fa-user-circle fa-4x"></i>
+                            </div>
+                            <div class="profile-info">
+                                <h1>@Model.FirstName @Model.LastName</h1>
+                                <span class="username">@Model.UserName</span>
+                                <span class="role-badge @(ViewBag.IsVerifiedVolunteer ? "verified" : "")">
+                                    @(ViewBag.IsAdministrator ? "Адміністратор" : (ViewBag.IsVerifiedVolunteer ? "Верифікований волонтер" : "Волонтер"))
+                                </span>
+                            </div>
+                        </div>
 
-        <div class="profile-content">
-            <div class="profile-section">
-                <h2>Особиста інформація</h2>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>Email:</span>
-                        <p>@Model.Email</p>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <span>Телефон:</span>
-                        <p>@Model.PhoneNumber</p>
-                    </div>
-                </div>
-            </div>
+                        <div class="profile-content">
+                            <div class="profile-section personal-info">
+                                <h2><i class="fas fa-user"></i> Особиста інформація</h2>
+                                <div class="info-grid">
+                                    <div class="info-card">
+                                        <div class="info-icon">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <div class="info-details">
+                                            <label>Ім'я</label>
+                                            <p>@Model.FirstName</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-card">
+                                        <div class="info-icon">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                        <div class="info-details">
+                                            <label>Прізвище</label>
+                                            <p>@Model.LastName</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-card">
+                                        <div class="info-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div class="info-details">
+                                            <label>Email</label>
+                                            <p>@Model.Email</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-card">
+                                        <div class="info-icon">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                        <div class="info-details">
+                                            <label>Телефон</label>
+                                            <p>@(string.IsNullOrEmpty(Model.PhoneNumber) ? "Не вказано" : Model.PhoneNumber)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-            <div class="profile-section">
-                <h2>Волонтерська діяльність</h2>
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <i class="fas fa-calendar-check"></i>
-                        <h3>Участь у подіях</h3>
-                        <p>5</p>
-                    </div>
-                    <div class="stat-card">
-                        <i class="fas fa-clock"></i>
-                        <h3>Годин волонтерства</h3>
-                        <p>24</p>
-                    </div>
-                    <div class="stat-card">
-                        <i class="fas fa-star"></i>
-                        <h3>Рейтинг</h3>
-                        <p>4.8</p>
-                    </div>
-                </div>
-            </div>
+                            <div class="profile-section">
+                                <h2><i class="fas fa-chart-line"></i> Волонтерська діяльність</h2>
+                                <div class="stats-grid">
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-calendar-check"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <h3>Відвідані події</h3>
+                                            <p class="stat-number">
+                                                @ViewBag.AttendedEventsCount
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="stat-card">
+                                        <div class="stat-icon">
+                                            <i class="fas fa-calendar-plus"></i>
+                                        </div>
+                                        <div class="stat-content">
+                                            <h3>Створені події</h3>
+                                            <p class="stat-number">
+                                                @ViewBag.CreatedEventsCount
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
 
-            @if (ViewBag.IsVerifiedVolunteer)
-            {
-                <div class="profile-section">
-                    <h2>Керування подіями</h2>
-                    <div class="action-buttons">
-                        <a href="@Url.Action("Create", "Events")" class="btn btn-primary">
-                            <i class="fas fa-plus-circle"></i> Створити подію
-                        </a>
-                        <a href="@Url.Action("ManageEvents", "Events")" class="btn btn-outline">
-                            <i class="fas fa-tasks"></i> Мої події
-                        </a>
+                            
+                        </div>
                     </div>
-                </div>
-            }
-        </div>
-            </div>
         </div>
     
  </div>

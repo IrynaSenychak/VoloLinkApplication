@@ -22,6 +22,21 @@ namespace VoloLinkApp.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("EventAttendance", b =>
+                {
+                    b.Property<int>("EventId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("EventId", "UserId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("EventAttendance");
+                });
+
             modelBuilder.Entity("EventVoloLinkUser", b =>
                 {
                     b.Property<string>("ParticipantsId")
@@ -290,7 +305,6 @@ namespace VoloLinkApp.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("CreatorId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("Date")
@@ -299,6 +313,9 @@ namespace VoloLinkApp.Migrations
                     b.Property<string>("Description")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsCompleted")
+                        .HasColumnType("bit");
 
                     b.Property<string>("Location")
                         .IsRequired()
@@ -318,6 +335,21 @@ namespace VoloLinkApp.Migrations
                     b.HasIndex("CreatorId");
 
                     b.ToTable("Events");
+                });
+
+            modelBuilder.Entity("EventAttendance", b =>
+                {
+                    b.HasOne("VoloLinkApp.Models.Event", null)
+                        .WithMany()
+                        .HasForeignKey("EventId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("VoloLinkApp.Areas.Identity.Data.VoloLinkUser", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("EventVoloLinkUser", b =>
@@ -401,9 +433,7 @@ namespace VoloLinkApp.Migrations
                 {
                     b.HasOne("VoloLinkApp.Areas.Identity.Data.VoloLinkUser", "Creator")
                         .WithMany("CreatedEvents")
-                        .HasForeignKey("CreatorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("CreatorId");
 
                     b.Navigation("Creator");
                 });

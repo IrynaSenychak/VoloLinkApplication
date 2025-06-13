@@ -3,8 +3,8 @@
     ViewData["Title"] = "Пошук подій";  
 }  
 
-@section Styles {  
-    <link rel="stylesheet" href="~/css/events.css" />  
+@section Styles {
+    <link rel="stylesheet" href="~/css/events_vololink.css" />
 }  
 
 <div class="profile-container">  
@@ -55,10 +55,12 @@
             <div class="no-events">  
                 <i class="fas fa-calendar-times"></i>  
                 <p>Не знайдено подій за вашим запитом</p>  
-            </div>  
-        }  
-        else  
-        {  
+            </div>
+}
+else
+{
+
+                   
             @foreach (var eventItem in Model)  
             {  
                 <div class="event-card">  
@@ -86,6 +88,7 @@
                     </div>  
                 </div>  
             }  
+            
         }  
     </div>  
 </div>  

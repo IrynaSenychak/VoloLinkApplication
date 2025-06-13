@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 using VoloLinkApp.Areas.Identity.Data;
 using VoloLinkApp.Models;
 
@@ -18,7 +19,7 @@ namespace VoloLinkApp.Controllers
             _userManager = userManager;
         }
 
-        // Get all events
+      
         public async Task<IActionResult> Index()
         {
             var events = await _context.Events
@@ -26,7 +27,41 @@ namespace VoloLinkApp.Controllers
                 .ToListAsync();
             return View(events);
         }
+        public async Task<IActionResult> MarkEventComplete(int id)
+        {
+            var @event = await _context.Events.FindAsync(id);
+            if (@event == null) return NotFound();
 
+            if (@event.CreatorId != User.FindFirstValue(ClaimTypes.NameIdentifier))
+                return Forbid();
+
+            @event.IsCompleted = true;
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Details), new { id });
+        }
+
+        public async Task<IActionResult> MarkAttendance(int eventId, string userId, bool attended)
+        {
+            var @event = await _context.Events
+                .Include(e => e.AttendedParticipants)
+                .FirstOrDefaultAsync(e => e.Id == eventId);
+
+            if (@event == null) return NotFound();
+
+            if (@event.CreatorId != User.FindFirstValue(ClaimTypes.NameIdentifier))
+                return Forbid();
+
+            var participant = await _context.Users.FindAsync(userId);
+            if (participant == null) return NotFound();
+
+            if (attended)
+                @event.AttendedParticipants.Add(participant);
+            else
+                @event.AttendedParticipants.Remove(participant);
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Details), new { id = eventId });
+        }
         //// Create new event
         //[HttpPost]
         //public async Task<IActionResult> Create(Event model)
@@ -53,6 +88,11 @@ namespace VoloLinkApp.Controllers
             if (@event == null)
             {
                 return NotFound();
+            }
+
+            if (!User.Identity.IsAuthenticated)
+            {
+                return View("PublicDetails", @event);
             }
 
             var currentUser = await _userManager.GetUserAsync(User);
@@ -213,6 +253,37 @@ namespace VoloLinkApp.Controllers
                 }
             }
             return View(model);
+        }
+        [HttpPost]
+        [Authorize]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> RemoveParticipant(int eventId, string userId)
+        {
+            var @event = await _context.Events
+                .Include(e => e.Participants)
+                .FirstOrDefaultAsync(e => e.Id == eventId);
+
+            if (@event == null)
+            {
+                return NotFound();
+            }
+
+            // Verify that the current user is the event creator
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (@event.CreatorId != currentUser.Id && !User.IsInRole("Administrator"))
+            {
+                return Forbid();
+            }
+
+            // Find the participant to remove
+            var participantToRemove = @event.Participants.FirstOrDefault(p => p.Id == userId);
+            if (participantToRemove != null)
+            {
+                @event.Participants.Remove(participantToRemove);
+                await _context.SaveChangesAsync();
+            }
+
+            return RedirectToAction(nameof(Details), new { id = eventId });
         }
 
         [Authorize]

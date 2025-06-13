@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
+using VoloLinkApp.Areas.Identity;
 using VoloLinkApp.Areas.Identity.Data;
 using VoloLinkApp.Models;
 using VoloLinkApp.Services;
@@ -10,30 +11,33 @@ var connectionString = builder.Configuration.GetConnectionString("VoloLinkDbCont
 
 builder.Services.AddDbContext<VoloLinkDbContext>(options => options.UseSqlServer(connectionString));
 
-//builder.Services.AddDefaultIdentity<VoloLinkUser>(options => options.SignIn.RequireConfirmedAccount = false).AddEntityFrameworkStores<VoloLinkDbContext>();
 
-// Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
-//////////////////////////////////////////////////////////////////////////////
-//builder.Services.AddIdentity<VoloLinkUser, IdentityRole>()
-//        .AddEntityFrameworkStores<VoloLinkDbContext>()
-//        .AddDefaultTokenProviders();
+
+builder.Services.AddLogging(logging =>
+{
+    logging.AddConsole();
+    logging.AddDebug();
+    logging.AddAzureWebAppDiagnostics();
+});
+
 
 builder.Services.AddIdentity<VoloLinkUser, IdentityRole>()
     .AddEntityFrameworkStores<VoloLinkDbContext>()
-    .AddDefaultTokenProviders();
+    .AddDefaultTokenProviders()
+    .AddErrorDescriber<UkrainianIdentityErrorDescriber>(); ;
 
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+   
     app.UseHsts();
 }
 
@@ -139,19 +143,21 @@ async Task SeedEventsAsync(IServiceProvider serviceProvider)
     }
 }
 
-
-app.UseAuthentication();
-
-app.MapRazorPages();
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
 app.UseRouting();
-
+app.UseAuthentication();
 app.UseAuthorization();
+
+
+
+
+
+app.MapRazorPages();
+
+
+
+
 
 
 
